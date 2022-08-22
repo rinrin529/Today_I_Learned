@@ -41,7 +41,7 @@
 일반 어플리케이션 코드는 OS만 거치고 하드웨어로 전달되는데, 자바 어플리케이션의 경우 JVM을 한번 더 거친다. 즉, 일반 어플리케이션의 경우 OS에 종속적이지만, 자바는 그렇지 않다. 반면 JVM의 경우 OS에 종속적이다. 따라서 OS에 종류에 맞는 JVM만 있다면 어떤 자바 어플리케이션이라도 실행 가능하다. 아래의 예시와 같이 OS의 종류에 따라 알맞는 JVM이 있어야한다.</br></br>
 <img src="https://user-images.githubusercontent.com/45943080/185932195-c9c94fae-3b75-4371-b54a-2fd052d06316.png"  width="700"/>
 </br></br>
-## CHAPTER 1.8 몰랐던 자바 실행 과정
+## CHAPTER 1.8 정확하게는 몰랐던 자바 실행 과정
 ```java
 class Hello {
    public static void main(String [] args) {
