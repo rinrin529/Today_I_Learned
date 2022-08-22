@@ -1,5 +1,5 @@
 # '자바의 정석'을 읽고 정리한 포스팅 입니다 🙌 
-처음 부터 읽고 개인적으로  중요하다고 생각한 부분만 정리한 내용입니다.
+기초가 부족한 듯 해서 처음부터 읽고 정리한 내용입니다.
 </br></br>
 ## CHAPTER 1.1~1.2 자바의 TMI
 - 자바는 썬 마이크로시스템즈(Sun Microsystems, Inc. 이하 썬)에서 개발함
@@ -39,3 +39,22 @@
 <img src="https://user-images.githubusercontent.com/45943080/185931152-c3a1a907-cf2f-4dc4-880c-6ebce61d05d2.png"  width="400"/></br></br>
 일반 어플리케이션 코드는 OS만 거치고 하드웨어로 전달되는데, 자바 어플리케이션의 경우 JVM을 한번 더 거친다. 즉, 일반 어플리케이션의 경우 OS에 종속적이지만, 자바는 그렇지 않다. 반면 JVM의 경우 OS에 종속적이다. 따라서 OS에 종류에 맞는 JVM만 있다면 어떤 자바 어플리케이션이라도 실행 가능하다. 아래의 예시와 같이 OS의 종류에 따라 알맞는 JVM이 있어야한다.</br></br>
 <img src="https://user-images.githubusercontent.com/45943080/185932195-c9c94fae-3b75-4371-b54a-2fd052d06316.png"  width="700"/>
+</br></br>
+## CHAPTER 1.8 몰랐던 자바 실행 과정
+```java
+class Hello {
+   public static void main(String [] args) {
+      System.out.println("Hello, World"); 
+   }
+}
+```
+Hello.java로 저장한 파일을 실행하게 되면 외부적인 진행 순서는 아래와 같다
+1. 자바 컴파일러 javac.exc를 사용해 컴파일
+2. 소스파일 Hello.java로부터 클래스 파일 Hello.class 생성
+3. 자바 인터프리터 java.exe로 실행
+4. Hello, World 출력
+
+그리고 내부적인 진행 순서는 아래와 같다
+1. 프로그램의 실행에 필요한 *.class 파일 로드 (여기서는 Hello.class 로드)
+2. 크래스 파일을 검사한다 ( 파일 형식, 악성 코드 체크)
+3. 지정된 클래스 (Hello) 에서 main(String [] args)를 호출
