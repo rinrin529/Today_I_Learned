@@ -1,61 +1,12 @@
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frinrin529%2FToday_I_Learned%2Ftree%2Fmain%2FJava&count_bg=%23BFB4EC&title_bg=%23555555&icon=apachespark.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)</br>
+
 # '자바의 정석'을 읽고 정리한 포스팅 입니다 🙌 
 기초가 부족한 듯 해서 처음부터 읽고 정리한 내용입니다.
 </br></br>
-## CHAPTER 1.1~1.2 자바의 TMI
-- 자바는 썬 마이크로시스템즈(Sun Microsystems, Inc. 이하 썬)에서 개발함
-- 근데 2010년에 썬이 오라클에 인수되면서 자바는 이제 오라클 제품임
-- 자바의 시초는 Oak라는 언어
-- C++의 장점을 도입하고 단점을 보완한 언어
-</br></br>
-## CHAPTER 1.3 자바의 특징
-### 1. 운영체제에 독립적이다
-- 자바 응용프로그램은 운영체제나 하드웨어가 아닌 JVM하고만 통신
-- JVM은 자바 응용프로그램으로부터 전달받은 명령을 해당 운영체제가 이해할 수 있도록 변환하여 전달
-- 즉, 자바로 작성된 프로그램은 운영체제에 독립적이지만 JVM은 운영체제에 종속적 
-- 자바로 작성된 프로그램은 운영체제와 하드웨어에 관계 없이 실행 가능
+ 
+### [Chapter 1](https://github.com/rinrin529/Today_I_Learned/blob/main/Java/Chapter_1.md#chapter-1112-%EC%9E%90%EB%B0%94%EC%9D%98-tmi)   자바를 시작하기 전에
 
-### 2. 객체지향 언어이다
-- 상속, 캡슐화, 다형성이 잘 적용된 순수한 객체지향 언어
+### [Chapter 2]()   변수
 
-### 3. 자동 메모리 관리 (Garbage Collection)
-- 자바 프로그램이 실행되면, 가비지 컬렉터가 자동으로 메모리 관리
-- 프로그래머는 따로 관리를 하지 않아도 된다
+### [Chapter 3]()   연산자
 
-### 4. 네트워크와 분산처리를 지원한다
-- 다양한 네트워크 프로그래밍 라이브러리를 통해 짧은 시간에 네트워크 관련 프로그램을 쉽게 개발 가능
-
-### 5. 멀티쓰레드를 지원한다
-- 자바에서 개발되는 멀티쓰레드 프로그램은 시스템과 관계없이 구현 가능
-- 관련된 라이브러리(Java API)가 제공되므로 구현이 쉬움
-- 여러 쓰레드에 대한 스케줄링은 자바 인터프리터가 담당
-
-### 6. 동적 로딩을 지원한다
-- 실행 시에 모든 클래스가 로딩되지 않고 필요한 시점에 클래스를 로딩하여 사용 가능
-- 일부 클래스가 변경되어도 전체 애플리케이션을 다시 컴파일하지 않아도 된다.
-- 변경 사항이 발생해도 비교적 적은 작업만으로도 처리할 수 있는 유연한 어플리케이션 
-</br></br>
-## CHAPTER 1.4 JVM (Java Virtual Machine)
-
-<img src="https://user-images.githubusercontent.com/45943080/185931152-c3a1a907-cf2f-4dc4-880c-6ebce61d05d2.png"  width="400"/></br></br>
-일반 어플리케이션 코드는 OS만 거치고 하드웨어로 전달되는데, 자바 어플리케이션의 경우 JVM을 한번 더 거친다. 즉, 일반 어플리케이션의 경우 OS에 종속적이지만, 자바는 그렇지 않다. 반면 JVM의 경우 OS에 종속적이다. 따라서 OS에 종류에 맞는 JVM만 있다면 어떤 자바 어플리케이션이라도 실행 가능하다. 아래의 예시와 같이 OS의 종류에 따라 알맞는 JVM이 있어야한다.</br></br>
-<img src="https://user-images.githubusercontent.com/45943080/185932195-c9c94fae-3b75-4371-b54a-2fd052d06316.png"  width="700"/>
-</br></br>
-## CHAPTER 1.8 정확하게는 몰랐던 자바 실행 과정
-```java
-class Hello {
-   public static void main(String [] args) {
-      System.out.println("Hello, World"); 
-   }
-}
-```
-Hello.java로 저장한 파일을 실행하게 되면 외부적인 진행 순서는 아래와 같다
-1. 자바 컴파일러 javac.exc를 사용해 컴파일
-2. 소스파일 Hello.java로부터 클래스 파일 Hello.class 생성
-3. 자바 인터프리터 java.exe로 실행
-4. Hello, World 출력
-
-그리고 내부적인 진행 순서는 아래와 같다
-1. 프로그램의 실행에 필요한 *.class 파일 로드 (여기서는 Hello.class 로드)
-2. 크래스 파일을 검사한다 ( 파일 형식, 악성 코드 체크)
-3. 지정된 클래스 (Hello) 에서 main(String [] args)를 호출
+### [Chapter 4]()   조건문과 반복문
